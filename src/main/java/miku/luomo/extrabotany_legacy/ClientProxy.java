@@ -1,4 +1,4 @@
-package com.myname.mymodid;
+package miku.luomo.extrabotany_legacy;
 
 public class ClientProxy extends CommonProxy {
 
