@@ -1,4 +1,4 @@
-package miku.luomo.extrabotany_legacy.common;
+package miku.luomo.extrabotany_legacy.common.handler;
 
 import net.minecraft.item.ItemStack;
 

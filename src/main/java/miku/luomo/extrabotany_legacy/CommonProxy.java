@@ -12,7 +12,8 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
-import miku.luomo.extrabotany_legacy.common.ModFuelHandler;
+import miku.luomo.extrabotany_legacy.common.core.config.ConfigHandler;
+import miku.luomo.extrabotany_legacy.common.handler.ModFuelHandler;
 import miku.luomo.extrabotany_legacy.common.register.ModItemRegister;
 
 public class CommonProxy {
@@ -24,6 +25,7 @@ public class CommonProxy {
     // GameRegistry." (Remove if not needed)
     public void preInit(FMLPreInitializationEvent event) {
 
+        ConfigHandler.INSTANCE.loadConfig(event);
         GameRegistry.registerFuelHandler(new ModFuelHandler());
         LocalDateTime now = LocalDateTime.now();
 

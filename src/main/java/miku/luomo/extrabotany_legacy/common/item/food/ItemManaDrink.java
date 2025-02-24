@@ -1,12 +1,14 @@
 package miku.luomo.extrabotany_legacy.common.item.food;
 
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.EnumAction;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
 
 import miku.luomo.extrabotany_legacy.ExtraBotanyLegacy;
+import miku.luomo.extrabotany_legacy.common.register.ModItemRegister;
 import vazkii.botania.api.mana.IManaGivingItem;
 import vazkii.botania.api.mana.ManaItemHandler;
 
@@ -15,6 +17,11 @@ public class ItemManaDrink extends ItemModFood implements IManaGivingItem {
     public ItemManaDrink() {
         super(1, 0.1F, false, "manadrink");
         setTextureName(ExtraBotanyLegacy.MODID + ":manadrink");
+    }
+
+    @Override
+    public EnumAction getItemUseAction(ItemStack stack) {
+        return EnumAction.drink;
     }
 
     @Override
@@ -29,6 +36,8 @@ public class ItemManaDrink extends ItemModFood implements IManaGivingItem {
         player.addPotionEffect(new PotionEffect(Potion.jump.id, 1200, 0));
 
         ManaItemHandler.dispatchMana(itemStack, player, 10000, true);
+
+        player.inventory.addItemStackToInventory(new ItemStack(ModItemRegister.material, 1, 4));
 
     }
 }

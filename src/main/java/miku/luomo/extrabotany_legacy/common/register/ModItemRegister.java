@@ -7,6 +7,7 @@ import net.minecraft.item.Item;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import miku.luomo.extrabotany_legacy.common.item.food.*;
+import miku.luomo.extrabotany_legacy.common.item.material.ItemMaterial;
 
 @SuppressWarnings("unused")
 public class ModItemRegister {
@@ -19,6 +20,7 @@ public class ModItemRegister {
     public static final Item manaDrink = register(new ItemManaDrink());
     public static final Item nightmareFuel = register(new ItemNightmareFuel());
     public static final Item spiritFuel = register(new ItemSpiritFuel());
+    public static final Item material = register(new ItemMaterial());
 
     private static <T extends Item> T register(final T item) {
         ITEMS.add(item);
