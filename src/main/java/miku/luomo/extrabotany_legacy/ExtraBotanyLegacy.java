@@ -17,6 +17,7 @@ import cpw.mods.fml.common.event.FMLServerStartingEvent;
     modid = ExtraBotanyLegacy.MODID,
     version = Tags.VERSION,
     name = "Extra Botany: Legacy Edition",
+    dependencies = "required-after:Botania",
     acceptedMinecraftVersions = "[1.7.10]")
 public class ExtraBotanyLegacy {
 

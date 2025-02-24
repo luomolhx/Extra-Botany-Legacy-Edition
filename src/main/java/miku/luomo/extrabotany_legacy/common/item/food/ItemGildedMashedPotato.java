@@ -11,13 +11,10 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
 
-import miku.luomo.extrabotany_legacy.ExtraBotanyLegacy;
-
 public class ItemGildedMashedPotato extends ItemModFood {
 
     public ItemGildedMashedPotato() {
         super(4, 0.2f, false, "gildedMashedPotato");
-        setTextureName(ExtraBotanyLegacy.MODID + ":" + "gildedMashedPotato");
     }
 
     @Override

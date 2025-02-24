@@ -3,13 +3,10 @@ package miku.luomo.extrabotany_legacy.common.register;
 import java.util.ArrayList;
 import java.util.List;
 
-import miku.luomo.extrabotany_legacy.common.item.food.ItemHalloweenCandy;
-
 import net.minecraft.item.Item;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-import miku.luomo.extrabotany_legacy.common.item.food.ItemFriedChicken;
-import miku.luomo.extrabotany_legacy.common.item.food.ItemGildedMashedPotato;
+import miku.luomo.extrabotany_legacy.common.item.food.*;
 
 @SuppressWarnings("unused")
 public class ModItemRegister {
@@ -19,6 +16,9 @@ public class ModItemRegister {
     public static final Item friedChicken = register(new ItemFriedChicken());
     public static final Item gildedMashedPotato = register(new ItemGildedMashedPotato());
     public static final Item halloweenCandy = register(new ItemHalloweenCandy());
+    public static final Item manaDrink = register(new ItemManaDrink());
+    public static final Item nightmareFuel = register(new ItemNightmareFuel());
+    public static final Item spiritFuel = register(new ItemSpiritFuel());
 
     private static <T extends Item> T register(final T item) {
         ITEMS.add(item);
