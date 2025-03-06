@@ -14,6 +14,7 @@ import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import miku.luomo.extrabotany_legacy.common.core.config.ConfigHandler;
 import miku.luomo.extrabotany_legacy.common.handler.ModFuelHandler;
+import miku.luomo.extrabotany_legacy.common.register.ModBlockRegister;
 import miku.luomo.extrabotany_legacy.common.register.ModItemRegister;
 
 public class CommonProxy {
@@ -39,6 +40,7 @@ public class CommonProxy {
         if (christmas) LOG.info("Happy Christmas!");
 
         ModItemRegister.registerItems();
+        ModBlockRegister.registerBlocks();
 
         LOG.info("药水ID范围:{}", Potion.potionTypes.length);
     }

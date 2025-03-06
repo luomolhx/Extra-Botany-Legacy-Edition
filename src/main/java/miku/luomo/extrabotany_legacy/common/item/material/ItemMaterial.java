@@ -10,6 +10,8 @@ import net.minecraft.inventory.IInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.ChatComponentTranslation;
+import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
@@ -18,6 +20,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 import miku.luomo.extrabotany_legacy.ExtraBotanyLegacy;
 import miku.luomo.extrabotany_legacy.common.core.config.ConfigHandler;
 import miku.luomo.extrabotany_legacy.common.item.ItemMod;
+import miku.luomo.extrabotany_legacy.common.register.ModBlockRegister;
 import vazkii.botania.api.recipe.IFlowerComponent;
 import vazkii.botania.common.core.helper.ItemNBTHelper;
 
@@ -80,7 +83,19 @@ public class ItemMaterial extends ItemMod implements IFlowerComponent {
         if (player.getHeldItem()
             .getItemDamage() == 6 && player.isSneaking()) {
             if (ConfigHandler.GAIA_ENABLE) {
-
+                if (!world.isRemote) {
+                    return true;
+                }
+                return false;
+            }
+        } else {
+            if (world.getBlock(x, y, z) == ModBlockRegister.TROPHY) {
+                for (int i = 0; i < 9; i++) {
+                    ChatComponentTranslation text = new ChatComponentTranslation("extrabotany_legacymisc.noveline" + i);
+                    text.getChatStyle()
+                        .setColor(EnumChatFormatting.WHITE);
+                    player.addChatComponentMessage(text);
+                }
             }
         }
         return true;
