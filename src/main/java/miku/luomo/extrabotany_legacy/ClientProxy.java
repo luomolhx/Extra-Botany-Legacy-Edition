@@ -1,7 +1,7 @@
 package miku.luomo.extrabotany_legacy;
 
 import cpw.mods.fml.common.event.FMLInitializationEvent;
-import miku.luomo.extrabotany_legacy.client.render.itemblock.ItemBlockTrophyRender;
+import miku.luomo.extrabotany_legacy.client.render.itemblock.RenderItemBlockTrophy;
 
 public class ClientProxy extends CommonProxy {
 
@@ -12,7 +12,7 @@ public class ClientProxy extends CommonProxy {
     public void init(FMLInitializationEvent event) {
         super.init(event);
 
-        new ItemBlockTrophyRender();
+        new RenderItemBlockTrophy();
 
     }
 }
