@@ -2,8 +2,6 @@ package miku.luomo.extrabotany_legacy.client.render.itemblock;
 
 import static miku.luomo.extrabotany_legacy.common.register.ModBlockRegister.TROPHY;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.Minecraft;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -16,6 +14,8 @@ import net.minecraftforge.client.model.IModelCustom;
 import org.lwjgl.opengl.GL11;
 
 import cpw.mods.fml.client.registry.ClientRegistry;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import miku.luomo.extrabotany_legacy.client.entity.TileEntityTrophy;
 import miku.luomo.extrabotany_legacy.client.render.tile.RenderTileTrophy;
 

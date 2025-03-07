@@ -26,7 +26,8 @@ public class TileEntityTrophy extends TileEntity {
 
     @Override
     public void onDataPacket(NetworkManager net, S35PacketUpdateTileEntity pkt) {
-        rotationAngle = pkt.func_148857_g().getFloat("rotationAngle");
+        rotationAngle = pkt.func_148857_g()
+            .getFloat("rotationAngle");
     }
 
     public float getRotationAngle() {
