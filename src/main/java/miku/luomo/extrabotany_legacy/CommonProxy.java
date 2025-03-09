@@ -5,6 +5,7 @@ import static miku.luomo.extrabotany_legacy.ExtraBotanyLegacy.LOG;
 import java.time.LocalDateTime;
 import java.time.Month;
 
+import miku.luomo.extrabotany_legacy.common.register.ModEntityRegister;
 import net.minecraft.potion.Potion;
 
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -41,6 +42,7 @@ public class CommonProxy {
 
         ModItemRegister.registerItems();
         ModBlockRegister.registerBlocks();
+        ModEntityRegister.registerModEntity();
 
         LOG.info("药水ID范围:{}", Potion.potionTypes.length);
     }

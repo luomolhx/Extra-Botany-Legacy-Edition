@@ -1,4 +1,4 @@
-package miku.luomo.extrabotany_legacy.client.entity;
+package miku.luomo.extrabotany_legacy.common.entity;
 
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.NetworkManager;

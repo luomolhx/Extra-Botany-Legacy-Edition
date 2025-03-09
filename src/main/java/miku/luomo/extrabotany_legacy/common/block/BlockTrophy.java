@@ -4,8 +4,8 @@ import net.minecraft.block.material.Material;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
-import miku.luomo.extrabotany_legacy.client.entity.TileEntityTrophy;
 import miku.luomo.extrabotany_legacy.client.render.RenderIDs;
+import miku.luomo.extrabotany_legacy.common.entity.TileEntityTrophy;
 
 public class BlockTrophy extends ModBlock {
 

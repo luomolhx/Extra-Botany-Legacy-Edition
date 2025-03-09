@@ -15,6 +15,5 @@ public class ItemNightmareFuel extends ItemModFood {
     @Override
     public void onFoodEaten(ItemStack stack, World world, EntityPlayer player) {
         player.inventory.addItemStackToInventory(new ItemStack(ModItemRegister.spiritFuel));
-        // if (!player.isPotionActive(Potion.))
     }
 }

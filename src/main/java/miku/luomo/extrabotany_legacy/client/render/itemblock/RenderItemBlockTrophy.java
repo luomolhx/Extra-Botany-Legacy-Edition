@@ -16,8 +16,8 @@ import org.lwjgl.opengl.GL11;
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import miku.luomo.extrabotany_legacy.client.entity.TileEntityTrophy;
 import miku.luomo.extrabotany_legacy.client.render.tile.RenderTileTrophy;
+import miku.luomo.extrabotany_legacy.common.entity.TileEntityTrophy;
 
 @SideOnly(Side.CLIENT)
 public class RenderItemBlockTrophy implements IItemRenderer {

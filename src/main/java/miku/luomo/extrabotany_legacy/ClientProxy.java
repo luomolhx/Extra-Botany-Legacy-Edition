@@ -1,7 +1,10 @@
 package miku.luomo.extrabotany_legacy;
 
+import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
+import miku.luomo.extrabotany_legacy.client.render.itemblock.RenderItemBlockFlyingBoat;
 import miku.luomo.extrabotany_legacy.client.render.itemblock.RenderItemBlockTrophy;
+import miku.luomo.extrabotany_legacy.common.entity.EntityFlyingBoat;
 
 public class ClientProxy extends CommonProxy {
 
@@ -13,6 +16,7 @@ public class ClientProxy extends CommonProxy {
         super.init(event);
 
         new RenderItemBlockTrophy();
+        RenderingRegistry.registerEntityRenderingHandler(EntityFlyingBoat.class, new RenderItemBlockFlyingBoat());
 
     }
 }

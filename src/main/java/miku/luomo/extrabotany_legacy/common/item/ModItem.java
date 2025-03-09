@@ -6,9 +6,9 @@ import net.minecraft.item.Item;
 
 import miku.luomo.extrabotany_legacy.ExtraBotanyLegacy;
 
-public class ItemMod extends Item {
+public class ModItem extends Item {
 
-    public ItemMod(String name) {
+    public ModItem(String name) {
         setCreativeTab(extraBotanyTap);
         setUnlocalizedName(name);
         setTextureName(ExtraBotanyLegacy.MODID + ":" + name);

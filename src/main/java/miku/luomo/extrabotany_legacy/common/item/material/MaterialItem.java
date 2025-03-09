@@ -19,12 +19,12 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import miku.luomo.extrabotany_legacy.ExtraBotanyLegacy;
 import miku.luomo.extrabotany_legacy.common.core.config.ConfigHandler;
-import miku.luomo.extrabotany_legacy.common.item.ItemMod;
+import miku.luomo.extrabotany_legacy.common.item.ModItem;
 import miku.luomo.extrabotany_legacy.common.register.ModBlockRegister;
 import vazkii.botania.api.recipe.IFlowerComponent;
 import vazkii.botania.common.core.helper.ItemNBTHelper;
 
-public class ItemMaterial extends ItemMod implements IFlowerComponent {
+public class MaterialItem extends ModItem implements IFlowerComponent {
 
     public static final String TAG_UUID = "uuid";
 
@@ -34,7 +34,7 @@ public class ItemMaterial extends ItemMod implements IFlowerComponent {
     @SideOnly(Side.CLIENT)
     private IIcon[] icons = new IIcon[MANA_RESOURCE_NAMES.length];
 
-    public ItemMaterial() {
+    public MaterialItem() {
         super("material");
         setHasSubtypes(true);
     }
@@ -52,6 +52,7 @@ public class ItemMaterial extends ItemMod implements IFlowerComponent {
         }
     }
 
+    @SideOnly(Side.CLIENT)
     @Override
     public IIcon getIconFromDamage(int metadata) {
         return icons[metadata];
