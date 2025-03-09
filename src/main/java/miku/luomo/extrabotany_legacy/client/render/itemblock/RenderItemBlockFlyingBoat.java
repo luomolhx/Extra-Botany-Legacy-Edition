@@ -1,10 +1,9 @@
 package miku.luomo.extrabotany_legacy.client.render.itemblock;
 
-import static miku.luomo.extrabotany_legacy.ExtraBotanyLegacy.LOG;
-
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.entity.Entity;
+import net.minecraft.util.MathHelper;
 import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
@@ -30,17 +29,26 @@ public class RenderItemBlockFlyingBoat extends Render {
 
     public void doRender(EntityFlyingBoat item, double x, double y, double z, float entityYaw, float partialTicks) {
         GL11.glPushMatrix();
-        GL11.glTranslatef((float) x, (float) y, (float) z);
+        GL11.glTranslatef((float) x, (float) y , (float) z);
+        GL11.glRotatef(90.0F - entityYaw, 0.0F, 1.0F, 0.0F);
+
+//        float scale = 0.75F;
+//        GL11.glScalef(scale, scale, scale);
         this.bindEntityTexture(item);
+//        GL11.glScalef(1.0F/scale, 1.0F/scale, 1.0F/scale);
+
+        GL11.glScalef(-1.0F, -1.0F, 1.0F);
         this.modelFlyingBoat.render(item, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
         GL11.glPopMatrix();
     }
 
     @Override
     public ResourceLocation getEntityTexture(Entity item) {
-        if (item instanceof EntityFlyingBoat) {
-            return textures[((EntityFlyingBoat) item).getBoatType()];
-        }
-        return textures[0];
+        return getEntityTexture((EntityFlyingBoat) item);
+    }
+
+    public ResourceLocation getEntityTexture(EntityFlyingBoat item) {
+        int type = MathHelper.clamp_int(item.getBoatType(), 0, textures.length - 1);
+        return textures[type];
     }
 }

@@ -1,7 +1,5 @@
 package miku.luomo.extrabotany_legacy.common.entity;
 
-import static miku.luomo.extrabotany_legacy.ExtraBotanyLegacy.LOG;
-
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -35,7 +33,6 @@ public class EntityFlyingBoat extends Entity {
 
     public void entityInit() {
         this.dataWatcher.addObject(23, this.boatType);
-        this.dataWatcher.updateObject(23, this.boatType);
     }
 
     public int getBoatType() {
@@ -103,7 +100,6 @@ public class EntityFlyingBoat extends Entity {
     @Override
     public void setPositionAndRotation2(double x, double y, double z, float yaw, float pitch, int rotationIncrements) {
         super.setPositionAndRotation2(x, y, z, yaw, pitch, rotationIncrements);
-        this.dataWatcher.updateObject(23, this.boatType);
     }
 
     @Override

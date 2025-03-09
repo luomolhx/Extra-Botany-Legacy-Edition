@@ -5,7 +5,6 @@ import static miku.luomo.extrabotany_legacy.ExtraBotanyLegacy.LOG;
 import java.time.LocalDateTime;
 import java.time.Month;
 
-import miku.luomo.extrabotany_legacy.common.register.ModEntityRegister;
 import net.minecraft.potion.Potion;
 
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -16,6 +15,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import miku.luomo.extrabotany_legacy.common.core.config.ConfigHandler;
 import miku.luomo.extrabotany_legacy.common.handler.ModFuelHandler;
 import miku.luomo.extrabotany_legacy.common.register.ModBlockRegister;
+import miku.luomo.extrabotany_legacy.common.register.ModEntityRegister;
 import miku.luomo.extrabotany_legacy.common.register.ModItemRegister;
 
 public class CommonProxy {

@@ -1,7 +1,5 @@
 package miku.luomo.extrabotany_legacy.common.item;
 
-import static miku.luomo.extrabotany_legacy.ExtraBotanyLegacy.LOG;
-
 import java.util.List;
 
 import net.minecraft.client.renderer.texture.IIconRegister;
